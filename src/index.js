@@ -1,5 +1,9 @@
-const applyConfig = (config) => {
-  return config;
-};
+import { LABEL } from './constants';
+import installLabelEditor from './editor';
 
-export default applyConfig;
+export default function install(config) {
+  config.settings.labels = [...(config.settings.labels || []), LABEL];
+  config = installLabelEditor(config);
+
+  return config;
+}
