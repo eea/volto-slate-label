@@ -1,44 +1,47 @@
-import React, { useEffect } from 'react';
-import { Popup, List, Label } from 'semantic-ui-react';
-import { useEditorContext } from 'volto-slate/hooks';
+import React from 'react';
+import { Popup } from 'semantic-ui-react';
 
 export const LabelElement = (props) => {
-  const { attributes, children, element, mode, extras } = props;
+  const { attributes, children, element, mode } = props;
   const { data = {} } = element;
   const { uid } = data;
-  const editor = useEditorContext();
-
-  useEffect(() => {
-    const blockProps = editor?.getBlockProps ? editor.getBlockProps() : null;
-    const metadata = blockProps
-      ? blockProps.metadata || blockProps.properties
-      : extras?.metadata || {};
-  }, [editor, element, children]); // eslint-disable-line
 
   return (
     <>
       {mode === 'view' ? (
         <span id={`ref-${uid}`} aria-describedby="slate-label">
-          {children}
-          <Label
-            {...attributes}
-            content={data.label_content || ''}
-            id={`label-${uid}`}
+          <Popup
+            position={data.pointing}
+            open={data.label_content ? true : false}
+            trigger={
+              <span id={`cite_ref-${uid}`} {...attributes}>
+                {children}
+              </span>
+            }
+            style={{ fontSize: '14px', color: '#FFFFFF' }}
             className={data.type}
-            pointing={data.pointing}
-          ></Label>
+          >
+            {data.label_content}
+          </Popup>
         </span>
       ) : (
-        <>
-          {children}
-          <Label
-            {...attributes}
-            content={data.label_content || ''}
-            id={`label-${uid}`}
-            className={data.type}
-            pointing={data.pointing}
-          ></Label>
-        </>
+        <Popup
+          position={data.pointing}
+          open={data.label_content ? true : false}
+          trigger={
+            <span
+              id={`cite_ref-${uid}`}
+              {...attributes}
+              className="label-edit-node"
+            >
+              {children}
+            </span>
+          }
+          style={{ fontSize: '14px', color: '#FFFFFF' }}
+          className={data.type}
+        >
+          {data.label_content}
+        </Popup>
       )}
     </>
   );

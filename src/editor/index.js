@@ -8,6 +8,8 @@ import { withLabel, withBeforeInsertFragment } from './extensions';
 import { LABEL } from '../constants';
 import { LabelElement } from './render';
 
+import './styles.less';
+
 const messages = defineMessages({
   edit: {
     id: 'Edit label',

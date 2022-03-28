@@ -17,9 +17,14 @@ export const LabelEditorSchema = {
       type: 'string',
       factory: 'Choice',
       choices: [
-        ['left', 'left'],
-        ['right', 'right'],
-        ['below', 'below'],
+        ['top center', 'top center'],
+        ['top left', 'top left'],
+        ['top right', 'top right'],
+        ['bottom center', 'bottom center'],
+        ['bottom left', 'bottom left'],
+        ['bottom right', 'bottom right'],
+        ['right center', 'right center'],
+        ['left center', 'left center'],
       ],
     },
     type: {
