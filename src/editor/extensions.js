@@ -18,7 +18,6 @@ export const withLabel = (editor) => {
         {
           data: {
             uid: nanoid(5),
-            label: node.data?.label,
           },
         },
         {
