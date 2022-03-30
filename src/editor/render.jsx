@@ -25,7 +25,7 @@ export const LabelElement = (props) => {
               </span>
             }
             style={{ fontSize: '14px', color: '#FFFFFF' }}
-            className={data.type}
+            className={`ui label ${data.type}`}
           >
             {serializeNodes(data.label_content)}
           </Popup>
