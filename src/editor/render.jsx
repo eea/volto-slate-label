@@ -13,7 +13,7 @@ export const LabelElement = (props) => {
         <span id={`ref-${uid}`} aria-describedby="slate-label">
           <Popup
             position={data.pointing}
-            open={data.always_show}
+            open={data.always_show || undefined}
             on={!data.always_show && 'click'}
             trigger={
               <span
@@ -24,7 +24,6 @@ export const LabelElement = (props) => {
                 {children}
               </span>
             }
-            style={{ fontSize: '14px', color: '#FFFFFF' }}
             className={`ui label ${data.type}`}
           >
             {serializeNodes(data.label_content)}
@@ -33,7 +32,7 @@ export const LabelElement = (props) => {
       ) : (
         <Popup
           position={data.pointing}
-          open={data.always_show}
+          open={data.always_show || undefined}
           on={!data.always_show && 'click'}
           trigger={
             <span
@@ -44,7 +43,6 @@ export const LabelElement = (props) => {
               {children}
             </span>
           }
-          style={{ fontSize: '14px', color: '#FFFFFF' }}
           className={`ui label ${data.type}`}
         >
           {serializeNodes(data.label_content)}
