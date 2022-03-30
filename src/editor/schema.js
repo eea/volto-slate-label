@@ -4,13 +4,13 @@ export const LabelEditorSchema = {
     {
       id: 'default',
       title: 'Default',
-      fields: ['label_content', 'pointing', 'type'],
+      fields: ['label_content', 'pointing', 'type', 'always_show'],
     },
   ],
   properties: {
     label_content: {
       title: 'Content',
-      widget: 'text',
+      widget: 'slate_richtext',
     },
     pointing: {
       title: 'Pointing',
@@ -36,7 +36,13 @@ export const LabelEditorSchema = {
         ['high', 'high'],
         ['highlight', 'highlight'],
       ],
+      default: ['highlight', 'highlight'],
+    },
+    always_show: {
+      title: 'Always show',
+      description: 'Always show the content label popup',
+      type: 'boolean',
     },
   },
-  required: [''],
+  required: ['label_content'],
 };

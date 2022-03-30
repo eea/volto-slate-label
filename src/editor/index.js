@@ -1,4 +1,4 @@
-import mentainanceSVG from '@plone/volto/icons/maintenance.svg';
+import commentSVG from '@plone/volto/icons/comment.svg';
 import { defineMessages } from 'react-intl'; // , defineMessages
 
 import { makeInlineElementPlugin } from 'volto-slate/components/ElementEditor';
@@ -31,7 +31,7 @@ export default function install(config) {
     editSchema: LabelEditorSchema,
     extensions: [withLabel, withBeforeInsertFragment],
     hasValue: (formData) => !!formData.label_content,
-    toolbarButtonIcon: mentainanceSVG,
+    toolbarButtonIcon: commentSVG,
     messages,
   };
   const [installLabelEditor] = makeInlineElementPlugin(opts);

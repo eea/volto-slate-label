@@ -1,5 +1,6 @@
 import React from 'react';
 import { Popup } from 'semantic-ui-react';
+import { serializeNodes } from 'volto-slate/editor/render';
 
 export const LabelElement = (props) => {
   const { attributes, children, element, mode } = props;
@@ -12,35 +13,41 @@ export const LabelElement = (props) => {
         <span id={`ref-${uid}`} aria-describedby="slate-label">
           <Popup
             position={data.pointing}
-            open={data.label_content ? true : false}
+            open={data.always_show}
+            on={!data.always_show && 'click'}
             trigger={
-              <span id={`cite_ref-${uid}`} {...attributes}>
+              <span
+                id={`cite_ref-${uid}`}
+                {...attributes}
+                className="label-node"
+              >
                 {children}
               </span>
             }
             style={{ fontSize: '14px', color: '#FFFFFF' }}
             className={data.type}
           >
-            {data.label_content}
+            {serializeNodes(data.label_content)}
           </Popup>
         </span>
       ) : (
         <Popup
           position={data.pointing}
-          open={data.label_content ? true : false}
+          open={data.always_show}
+          on={!data.always_show && 'click'}
           trigger={
             <span
-              id={`cite_ref-${uid}`}
+              id={`label_ref-${uid}`}
               {...attributes}
-              className="label-edit-node"
+              className="label-node"
             >
               {children}
             </span>
           }
           style={{ fontSize: '14px', color: '#FFFFFF' }}
-          className={data.type}
+          className={`ui label ${data.type}`}
         >
-          {data.label_content}
+          {serializeNodes(data.label_content)}
         </Popup>
       )}
     </>
