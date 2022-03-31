@@ -1,9 +1,8 @@
 import React from 'react';
-import { Popup } from 'semantic-ui-react';
-import { serializeNodes } from 'volto-slate/editor/render';
+import LabelWrapper from './LabelWrapper';
 
 export const LabelElement = (props) => {
-  const { attributes, children, element, mode } = props;
+  const { element, mode } = props;
   const { data = {} } = element;
   const { uid } = data;
 
@@ -11,42 +10,10 @@ export const LabelElement = (props) => {
     <>
       {mode === 'view' ? (
         <span id={`ref-${uid}`} aria-describedby="slate-label">
-          <Popup
-            position={data.pointing}
-            open={data.always_show || undefined}
-            on={!data.always_show && 'click'}
-            trigger={
-              <span
-                id={`cite_ref-${uid}`}
-                {...attributes}
-                className="label-node"
-              >
-                {children}
-              </span>
-            }
-            className={`ui label ${data.type}`}
-          >
-            {serializeNodes(data.label_content)}
-          </Popup>
+          <LabelWrapper {...props} />
         </span>
       ) : (
-        <Popup
-          position={data.pointing}
-          open={data.always_show || undefined}
-          on={!data.always_show && 'click'}
-          trigger={
-            <span
-              id={`label_ref-${uid}`}
-              {...attributes}
-              className="label-node"
-            >
-              {children}
-            </span>
-          }
-          className={`ui label ${data.type}`}
-        >
-          {serializeNodes(data.label_content)}
-        </Popup>
+        <LabelWrapper {...props} />
       )}
     </>
   );

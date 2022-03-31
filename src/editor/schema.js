@@ -4,13 +4,18 @@ export const LabelEditorSchema = {
     {
       id: 'default',
       title: 'Default',
+      fields: ['label_type'],
+    },
+    {
+      id: 'tooltip',
+      title: 'Tooltip',
       fields: ['label_content', 'pointing', 'type', 'always_show'],
     },
   ],
   properties: {
     label_content: {
       title: 'Content',
-      widget: 'slate_richtext',
+      widget: 'slate',
     },
     pointing: {
       title: 'Pointing',
@@ -38,9 +43,19 @@ export const LabelEditorSchema = {
       ],
       default: ['highlight', 'highlight'],
     },
+    label_type: {
+      title: 'Type',
+      type: 'string',
+      factory: 'Choice',
+      choices: [
+        ['medium', 'medium'],
+        ['high', 'high'],
+        ['highlight', 'highlight'],
+      ],
+    },
     always_show: {
       title: 'Always show',
-      description: 'Always show the content label popup',
+      description: 'Always show the content label tooltip',
       type: 'boolean',
     },
   },
