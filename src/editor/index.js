@@ -30,7 +30,7 @@ export default function install(config) {
     isInlineElement: true,
     editSchema: LabelEditorSchema,
     extensions: [withLabel, withBeforeInsertFragment],
-    hasValue: (formData) => !!formData.label_content,
+    hasValue: (formData) => !!formData,
     toolbarButtonIcon: commentSVG,
     messages,
   };
