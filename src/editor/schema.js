@@ -59,5 +59,5 @@ export const LabelEditorSchema = {
       type: 'boolean',
     },
   },
-  required: ['label_content'],
+  required: [],
 };
