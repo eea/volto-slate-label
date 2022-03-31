@@ -1,12 +1,18 @@
 import React from 'react';
 import { Popup, Label } from 'semantic-ui-react';
-import { serializeNodes } from 'volto-slate/editor/render';
+import {
+  serializeNodes,
+  serializeNodesToText,
+} from 'volto-slate/editor/render';
 
 const LabelWrapper = (props) => {
   const { attributes, children, element } = props;
   const { data = {} } = element;
   const { uid, label_type } = data;
-  return (
+  const isTooltipText =
+    serializeNodesToText(data.label_content).trim().length > 0;
+
+  return isTooltipText ? (
     <Popup
       position={data.pointing}
       open={data.always_show || undefined}
@@ -24,6 +30,8 @@ const LabelWrapper = (props) => {
     >
       {serializeNodes(data.label_content)}
     </Popup>
+  ) : (
+    <Label className={label_type}>{children}</Label>
   );
 };
 
