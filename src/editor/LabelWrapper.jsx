@@ -10,6 +10,7 @@ const LabelWrapper = (props) => {
   const { data = {} } = element;
   const { uid, label_type } = data;
   const isTooltipText =
+    data.tooltip_content &&
     serializeNodesToText(data.tooltip_content).trim().length > 0;
 
   return isTooltipText ? (
