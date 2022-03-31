@@ -9,11 +9,11 @@ export const LabelEditorSchema = {
     {
       id: 'tooltip',
       title: 'Tooltip',
-      fields: ['label_content', 'pointing', 'type', 'always_show'],
+      fields: ['tooltip_content', 'pointing', 'type', 'always_show'],
     },
   ],
   properties: {
-    label_content: {
+    tooltip_content: {
       title: 'Content',
       widget: 'slate',
     },

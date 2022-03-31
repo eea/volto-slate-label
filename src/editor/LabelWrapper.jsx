@@ -10,7 +10,7 @@ const LabelWrapper = (props) => {
   const { data = {} } = element;
   const { uid, label_type } = data;
   const isTooltipText =
-    serializeNodesToText(data.label_content).trim().length > 0;
+    serializeNodesToText(data.tooltip_content).trim().length > 0;
 
   return isTooltipText ? (
     <Popup
@@ -28,7 +28,7 @@ const LabelWrapper = (props) => {
       }
       className={`ui label ${data.type}`}
     >
-      {serializeNodes(data.label_content)}
+      {serializeNodes(data.tooltip_content)}
     </Popup>
   ) : (
     <Label className={label_type}>{children}</Label>
