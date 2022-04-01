@@ -27,7 +27,7 @@ const LabelWrapper = (props) => {
           </span>
         )
       }
-      className={`ui label ${data.type}`}
+      className={data.type}
     >
       {serializeNodes(data.tooltip_content)}
     </Popup>
