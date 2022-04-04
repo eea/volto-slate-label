@@ -4,21 +4,47 @@ export const LabelEditorSchema = {
     {
       id: 'default',
       title: 'Default',
-      fields: ['label_type'],
+      fields: ['label_type', 'label_pointing'],
     },
     {
       id: 'tooltip',
       title: 'Tooltip',
-      fields: ['tooltip_content', 'pointing', 'type', 'always_show'],
+      fields: [
+        'tooltip_content',
+        'tooltip_pointing',
+        'tooltip_type',
+        'always_show',
+      ],
     },
   ],
   properties: {
+    label_type: {
+      title: 'Type',
+      type: 'string',
+      factory: 'Choice',
+      choices: [
+        ['medium', 'Medium importance'],
+        ['high', 'High importance'],
+        ['highlight', 'Highlight'],
+      ],
+    },
+    label_pointing: {
+      title: 'Pointing',
+      type: 'string',
+      factory: 'Choice',
+      choices: [
+        ['pointing', 'Up'],
+        ['right pointing', 'Right'],
+        ['left pointing', 'Left'],
+        ['pointing below', 'Down'],
+      ],
+    },
     tooltip_content: {
       title: 'Content',
       widget: 'slate',
     },
-    pointing: {
-      title: 'Pointing',
+    tooltip_pointing: {
+      title: 'Position',
       type: 'string',
       factory: 'Choice',
       choices: [
@@ -32,26 +58,16 @@ export const LabelEditorSchema = {
         ['left center', 'left center'],
       ],
     },
-    type: {
+    tooltip_type: {
       title: 'Type',
       type: 'string',
       factory: 'Choice',
       choices: [
-        ['medium', 'medium'],
-        ['high', 'high'],
-        ['highlight', 'highlight'],
+        ['medium', 'Medium importance'],
+        ['high', 'High importance'],
+        ['highlight', 'Highlight'],
       ],
       default: ['highlight', 'highlight'],
-    },
-    label_type: {
-      title: 'Type',
-      type: 'string',
-      factory: 'Choice',
-      choices: [
-        ['medium', 'medium'],
-        ['high', 'high'],
-        ['highlight', 'highlight'],
-      ],
     },
     always_show: {
       title: 'Always show',
