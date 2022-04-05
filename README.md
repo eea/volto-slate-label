@@ -15,11 +15,11 @@
 [![Duplicated Lines (%)](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-slate-label-develop&metric=duplicated_lines_density)](https://sonarqube.eea.europa.eu/dashboard?id=volto-slate-label-develop)
 
 
-[Volto](https://github.com/plone/volto) add-on
+[Volto](https://github.com/plone/volto) add-on. Label style for [volto-slate](https://github.com/eea/volto-slate) and tooltips.
 
 ## Features
 
-Demo GIF
+![Tags Block](https://github.com/eea/volto-slate-label/raw/develop/docs/slate-label.png)
 
 ## Getting started
 
