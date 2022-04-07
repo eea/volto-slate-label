@@ -21,9 +21,11 @@ const LabelWrapper = (props) => {
       on={!data.always_show && 'click'}
       trigger={
         label_type ? (
-          <Label className={cx(label_type, label_pointing, 'with-popup')}>
+          <label
+            className={cx(label_type, label_pointing, 'with-popup ui label')}
+          >
             {children}
-          </Label>
+          </label>
         ) : (
           <span
             id={`label_ref-${uid}`}
@@ -39,7 +41,9 @@ const LabelWrapper = (props) => {
       {serializeNodes(data.tooltip_content)}
     </Popup>
   ) : (
-    <Label className={cx(label_type, label_pointing)}>{children}</Label>
+    <label className={cx(label_type, label_pointing, 'ui label')}>
+      {children}
+    </label>
   );
 };
 
