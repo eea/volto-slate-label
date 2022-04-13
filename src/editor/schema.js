@@ -67,7 +67,7 @@ export const LabelEditorSchema = {
         ['high', 'High importance'],
         ['highlight', 'Highlight'],
       ],
-      default: ['highlight', 'highlight'],
+      default: '',
     },
     always_show: {
       title: 'Always show',
