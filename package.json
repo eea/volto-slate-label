@@ -19,7 +19,7 @@
   "addons": [
   ],
   "dependencies": {
-    "@plone/scripts": "*",
+    "@plone/scripts": "*"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",
