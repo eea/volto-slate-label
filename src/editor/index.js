@@ -1,29 +1,29 @@
-import commentSVG from "@plone/volto/icons/comment.svg";
-import { defineMessages } from "react-intl"; // , defineMessages
+import commentSVG from '@plone/volto/icons/comment.svg';
+import { defineMessages } from 'react-intl'; // , defineMessages
 
-import { makeInlineElementPlugin } from "@plone/volto-slate/elementEditor";
+import { makeInlineElementPlugin } from '@plone/volto-slate/elementEditor';
 
-import { LabelEditorSchema } from "./schema";
-import { withLabel, withBeforeInsertFragment } from "./extensions";
-import { LABEL } from "../constants";
-import { LabelElement } from "./render";
+import { LabelEditorSchema } from './schema';
+import { withLabel, withBeforeInsertFragment } from './extensions';
+import { LABEL } from '../constants';
+import { LabelElement } from './render';
 
-import "./styles.less";
+import './styles.less';
 
 const messages = defineMessages({
   edit: {
-    id: "Edit label",
-    defaultMessage: "Edit label",
+    id: 'Edit label',
+    defaultMessage: 'Edit label',
   },
   delete: {
-    id: "Remove label",
-    defaultMessage: "Remove label",
+    id: 'Remove label',
+    defaultMessage: 'Remove label',
   },
 });
 
 export default function install(config) {
   const opts = {
-    title: "Label",
+    title: 'Label',
     pluginId: LABEL,
     elementType: LABEL,
     element: LabelElement,
@@ -39,10 +39,10 @@ export default function install(config) {
 
   const { slate } = config.settings;
 
-  slate.toolbarButtons = [...(slate.toolbarButtons || []), "label"];
+  slate.toolbarButtons = [...(slate.toolbarButtons || []), 'label'];
   slate.expandedToolbarButtons = [
     ...(slate.expandedToolbarButtons || []),
-    "label",
+    'label',
   ];
 
   return config;

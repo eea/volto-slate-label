@@ -1,6 +1,6 @@
-import { LABEL } from "../constants";
-import { nanoid } from "@plone/volto-slate/utils";
-import { Transforms } from "slate";
+import { LABEL } from '../constants';
+import { nanoid } from '@plone/volto-slate/utils';
+import { Transforms } from 'slate';
 
 export const withLabel = (editor) => {
   const { normalizeNode, isInline } = editor;
@@ -22,7 +22,7 @@ export const withLabel = (editor) => {
         },
         {
           at: path,
-        }
+        },
       );
     }
     return normalizeNode(entry);

@@ -1,10 +1,10 @@
-import React from "react";
-import { Popup } from "semantic-ui-react";
-import cx from "classnames";
+import React from 'react';
+import { Popup } from 'semantic-ui-react';
+import cx from 'classnames';
 import {
   serializeNodes,
   serializeNodesToText,
-} from "@plone/volto-slate/editor/render";
+} from '@plone/volto-slate/editor/render';
 
 const LabelWrapper = (props) => {
   const { attributes, children, element } = props;
@@ -18,11 +18,11 @@ const LabelWrapper = (props) => {
     <Popup
       position={data.tooltip_pointing}
       open={data.always_show || undefined}
-      on={!data.always_show && "click"}
+      on={!data.always_show && 'click'}
       trigger={
         label_type ? (
           <label
-            className={cx(label_type, label_pointing, "with-popup ui label")}
+            className={cx(label_type, label_pointing, 'with-popup ui label')}
           >
             {children}
           </label>
@@ -41,7 +41,7 @@ const LabelWrapper = (props) => {
       {serializeNodes(data.tooltip_content)}
     </Popup>
   ) : (
-    <label className={cx(label_type, label_pointing, "ui label")}>
+    <label className={cx(label_type, label_pointing, 'ui label')}>
       {children}
     </label>
   );
