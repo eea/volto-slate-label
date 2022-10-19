@@ -17,11 +17,9 @@
     "url": "git@github.com:eea/volto-slate-label.git"
   },
   "addons": [
-    "volto-slate"
   ],
   "dependencies": {
-    "@plone/scripts": "*",
-    "volto-slate": "*"
+    "@plone/scripts": "*"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",
