@@ -1,5 +1,5 @@
 import { LABEL } from '../constants';
-import { nanoid } from '@plone/volto-slate/utils';
+import { nanoid } from 'volto-slate/utils';
 import { Transforms } from 'slate';
 
 export const withLabel = (editor) => {
