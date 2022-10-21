@@ -4,9 +4,9 @@ pipeline {
   environment {
         GIT_NAME = "volto-slate-label"
         NAMESPACE = "@eeacms"
-        SONARQUBE_TAGS = "volto.eea.europa.eu,demo-www.eea.europa.eu"
+        SONARQUBE_TAGS = "volto.eea.europa.eu,demo-www.eea.europa.eu,prod-www.eea.europa.eu"
         DEPENDENCIES = ""
-        VOLTO = "alpha"
+        VOLTO = "16.0.0-alpha.14"
     }
 
   stages {
