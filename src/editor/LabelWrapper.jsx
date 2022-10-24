@@ -19,7 +19,7 @@ const LabelWrapper = (props) => {
       <Popup
         position={data.tooltip_pointing}
         open={data.always_show || undefined}
-        on={!data.always_show && 'click'}
+        on={!data.always_show ? 'click' : undefined}
         trigger={
           label_type ? (
             <label
