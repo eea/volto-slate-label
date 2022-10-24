@@ -29,28 +29,6 @@ This version requires: `@plone/volto >= 16.0.0.alpha.15` (`volto-slate` part of 
 
 ## Getting started
 
-### Try volto-slate-label with Docker
-
-1. Get the latest Docker images
-
-   ```
-   docker pull plone
-   docker pull plone/volto
-   ```
-
-1. Start Plone backend
-   ```
-   docker run -d --name plone -p 8080:8080 -e SITE=Plone -e PROFILES="profile-plone.restapi:blocks" plone
-   ```
-
-1. Start Volto frontend
-
-   ```
-   docker run -it --rm -p 3000:3000 --link plone -e ADDONS="@eeacms/volto-slate-label" plone/volto
-   ```
-
-1. Go to http://localhost:3000
-
 ### Add volto-slate-label to your Volto project
 
 1. Make sure you have a [Plone backend](https://plone.org/download) up-and-running at http://localhost:8080/Plone
@@ -65,7 +43,7 @@ This version requires: `@plone/volto >= 16.0.0.alpha.15` (`volto-slate` part of 
    ],
 
    "dependencies": {
-       "@eeacms/volto-slate-label": "^1.0.0"
+       "@eeacms/volto-slate-label": "*"
    }
    ```
 
@@ -73,7 +51,7 @@ This version requires: `@plone/volto >= 16.0.0.alpha.15` (`volto-slate` part of 
 
    ```
    npm install -g yo @plone/generator-volto
-   yo @plone/volto my-volto-project --addon @eeacms/volto-slate-label
+   yo @plone/volto my-volto-project --canary --addon @eeacms/volto-slate-label
    cd my-volto-project
    ```
 
@@ -106,9 +84,3 @@ See [LICENSE.md](https://github.com/eea/volto-slate-label/blob/master/LICENSE.md
 ## Funding
 
 [European Environment Agency (EU)](http://eea.europa.eu)
-/LICENSE.md) for details.
-
-## Funding
-
-[European Environment Agency (EU)](http://eea.europa.eu)
-
