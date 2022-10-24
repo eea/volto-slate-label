@@ -4,7 +4,7 @@ import cx from 'classnames';
 import {
   serializeNodes,
   serializeNodesToText,
-} from 'volto-slate/editor/render';
+} from '@plone/volto-slate/editor/render';
 
 const LabelWrapper = (props) => {
   const { attributes, children, element } = props;
