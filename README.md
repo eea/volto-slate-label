@@ -19,7 +19,13 @@
 
 ## Features
 
-![Tags Block](https://github.com/eea/volto-slate-label/raw/develop/docs/slate-label.png)
+![Label Block](https://github.com/eea/volto-slate-label/raw/develop/docs/slate-label.png)
+
+## Upgrade
+
+### Upgrading to 0.4.x
+
+This version requires: `@plone/volto >= 16.0.0.alpha.15` (`volto-slate` part of Volto Core).
 
 ## Getting started
 
