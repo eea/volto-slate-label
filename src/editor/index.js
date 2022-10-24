@@ -1,7 +1,7 @@
 import commentSVG from '@plone/volto/icons/comment.svg';
 import { defineMessages } from 'react-intl'; // , defineMessages
 
-import { makeInlineElementPlugin } from 'volto-slate/components/ElementEditor';
+import { makeInlineElementPlugin } from '@plone/volto-slate/elementEditor';
 
 import { LabelEditorSchema } from './schema';
 import { withLabel, withBeforeInsertFragment } from './extensions';
