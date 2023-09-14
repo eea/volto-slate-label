@@ -19,7 +19,7 @@ export const LabelEditorSchema = {
   ],
   properties: {
     label_type: {
-      title: 'Type',
+      title: 'Type of label',
       type: 'string',
       factory: 'Choice',
       choices: [
@@ -27,9 +27,10 @@ export const LabelEditorSchema = {
         ['high', 'High importance'],
         ['highlight', 'Highlight'],
       ],
+      description: 'Choose a type or leave the default value (No value).',
     },
     label_pointing: {
-      title: 'Pointing',
+      title: 'Label pointing',
       type: 'string',
       factory: 'Choice',
       choices: [
@@ -38,13 +39,16 @@ export const LabelEditorSchema = {
         ['left pointing', 'Left'],
         ['pointing below', 'Down'],
       ],
+      description:
+        'Choose an orientation or leave the default value (No value).',
     },
     tooltip_content: {
-      title: 'Content',
+      title: 'Tooltip content',
       widget: 'slate',
+      description: 'Enter the text you want to display in the tooltip.',
     },
     tooltip_pointing: {
-      title: 'Position',
+      title: 'Tooltip position',
       type: 'string',
       factory: 'Choice',
       choices: [
@@ -59,7 +63,7 @@ export const LabelEditorSchema = {
       ],
     },
     tooltip_type: {
-      title: 'Type',
+      title: 'Tooltip type',
       type: 'string',
       factory: 'Choice',
       choices: [
@@ -70,8 +74,8 @@ export const LabelEditorSchema = {
       default: '',
     },
     always_show: {
-      title: 'Always show',
-      description: 'Always show the content label tooltip',
+      title: 'Always show tooltip',
+      description: 'Always show the content label tooltip.',
       type: 'boolean',
     },
   },
