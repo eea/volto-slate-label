@@ -23,11 +23,15 @@ export const LabelEditorSchema = {
       type: 'string',
       factory: 'Choice',
       choices: [
+        ['simple', 'Simple'],
         ['medium', 'Medium importance'],
         ['high', 'High importance'],
         ['highlight', 'Highlight'],
       ],
-      description: 'Choose a type or leave the default value (No value).',
+      default: 'simple',
+      description: 'Choose a type or leave the default value (Simple).',
+      required: true,
+      noValueOption: false,
     },
     label_pointing: {
       title: 'Label pointing',
