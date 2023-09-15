@@ -29,9 +29,22 @@ This version requires: `@plone/volto >= 16.0.0.alpha.15` (`volto-slate` part of 
 
 ## Getting started
 
+### Try volto-slate-label with Docker
+
+      git clone https://github.com/eea/volto-slate-label.git
+      cd volto-slate-label
+      make
+      make start
+
+Go to http://localhost:3000
+
 ### Add volto-slate-label to your Volto project
 
 1. Make sure you have a [Plone backend](https://plone.org/download) up-and-running at http://localhost:8080/Plone
+
+   ```Bash
+   docker compose up backend
+   ```
 
 1. Start Volto frontend
 
