@@ -21,7 +21,7 @@ const LabelWrapper = (props) => {
         open={data.always_show || undefined}
         on={!data.always_show ? 'click' : undefined}
         trigger={
-          label_type ? (
+          label_type !== undefined && label_type !== 'simple' ? (
             <label
               className={cx(label_type, label_pointing, 'with-popup ui label')}
             >
