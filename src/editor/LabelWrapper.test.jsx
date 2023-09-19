@@ -19,6 +19,7 @@ describe('LabelWrapper', () => {
           tooltip_pointing: 'top center',
           always_show: false,
           tooltip_type: 'info',
+          tooltip_size: 'wide',
         },
       },
     };
@@ -41,6 +42,7 @@ describe('LabelWrapper', () => {
           tooltip_pointing: 'top center',
           always_show: true,
           tooltip_type: 'info',
+          tooltip_size: 'wide',
         },
       },
     };
@@ -62,6 +64,29 @@ describe('LabelWrapper', () => {
           tooltip_pointing: 'top center',
           always_show: true,
           tooltip_type: 'info',
+          tooltip_size: 'wide',
+        },
+      },
+    };
+    render(
+      <LabelWrapper {...props}>
+        <div>Test</div>
+      </LabelWrapper>,
+    );
+  });
+  it('renders without crashing with no tooltip_size', () => {
+    const props = {
+      attributes: {},
+      element: {
+        data: {
+          uid: '123',
+          label_type: 'type',
+          label_pointing: 'pointing',
+          tooltip_content: [{ text: 'Tooltip Content' }],
+          tooltip_pointing: 'top center',
+          always_show: true,
+          tooltip_type: 'info',
+          tooltip_size: undefined,
         },
       },
     };
@@ -84,6 +109,7 @@ describe('LabelWrapper', () => {
           tooltip_pointing: 'top center',
           always_show: true,
           tooltip_type: 'info',
+          tooltip_size: 'wide',
         },
       },
     };
