@@ -19,6 +19,7 @@ describe('LabelWrapper', () => {
           tooltip_pointing: 'top center',
           always_show: false,
           tooltip_type: 'info',
+          tooltip_size: 'wide',
         },
       },
     };
@@ -41,6 +42,7 @@ describe('LabelWrapper', () => {
           tooltip_pointing: 'top center',
           always_show: true,
           tooltip_type: 'info',
+          tooltip_size: 'wide',
         },
       },
     };
@@ -62,6 +64,7 @@ describe('LabelWrapper', () => {
           tooltip_pointing: 'top center',
           always_show: true,
           tooltip_type: 'info',
+          tooltip_size: 'wide',
         },
       },
     };
@@ -84,6 +87,7 @@ describe('LabelWrapper', () => {
           tooltip_pointing: 'top center',
           always_show: true,
           tooltip_type: 'info',
+          tooltip_size: 'wide',
         },
       },
     };
