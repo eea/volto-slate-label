@@ -74,6 +74,28 @@ describe('LabelWrapper', () => {
       </LabelWrapper>,
     );
   });
+  it('renders without crashing with no tooltip_size', () => {
+    const props = {
+      attributes: {},
+      element: {
+        data: {
+          uid: '123',
+          label_type: 'type',
+          label_pointing: 'pointing',
+          tooltip_content: [{ text: 'Tooltip Content' }],
+          tooltip_pointing: 'top center',
+          always_show: true,
+          tooltip_type: 'info',
+          tooltip_size: undefined,
+        },
+      },
+    };
+    render(
+      <LabelWrapper {...props}>
+        <div>Test</div>
+      </LabelWrapper>,
+    );
+  });
 
   it('renders without crashing with no tooltip _content', () => {
     const props = {
