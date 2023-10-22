@@ -19,7 +19,7 @@
 
 ## Features
 
-![Label Block](https://github.com/eea/volto-slate-label/raw/master/docs/slate-label.png)
+![Label Block](https://raw.githubusercontent.com/eea/volto-slate-label/master/docs/slate-label.png)
 
 ## Upgrade
 
