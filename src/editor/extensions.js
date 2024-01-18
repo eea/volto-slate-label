@@ -6,7 +6,7 @@ export const withLabel = (editor) => {
   const { normalizeNode, isInline } = editor;
 
   editor.isInline = (element) => {
-    return element.type === LABEL ? true : isInline(element);
+    return element && element.type === LABEL ? true : isInline(element);
   };
 
   editor.normalizeNode = (entry) => {
