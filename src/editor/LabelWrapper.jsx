@@ -12,6 +12,7 @@ const LabelWrapper = (props) => {
   const {
     uid,
     always_show,
+    show_on_hover,
     label_type,
     label_pointing,
     tooltip_type,
@@ -34,7 +35,7 @@ const LabelWrapper = (props) => {
       }
       position={tooltip_pointing}
       open={always_show || undefined}
-      on={!always_show ? 'click' : undefined}
+      on={show_on_hover ? 'hover' : 'click'}
       trigger={
         label_type !== undefined && label_type !== 'simple' ? (
           <label
