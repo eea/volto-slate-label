@@ -15,7 +15,7 @@ export const LabelEditorSchema = {
         'tooltip_type',
         'tooltip_size',
         'always_show',
-        'show_on_hover'
+        'show_on_hover',
       ],
     },
   ],
