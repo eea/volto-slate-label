@@ -95,7 +95,7 @@ export const LabelEditorSchema = {
       type: 'boolean',
     },
     show_on_hover: {
-      title: 'Show tooltip on label hover',
+      title: 'Show tooltip on hover',
       description: 'Show the content label tooltip on hover.',
       type: 'boolean',
     },
