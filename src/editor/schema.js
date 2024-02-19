@@ -15,6 +15,7 @@ export const LabelEditorSchema = {
         'tooltip_type',
         'tooltip_size',
         'always_show',
+        'show_on_hover',
       ],
     },
   ],
@@ -91,6 +92,11 @@ export const LabelEditorSchema = {
     always_show: {
       title: 'Always show tooltip',
       description: 'Always show the content label tooltip.',
+      type: 'boolean',
+    },
+    show_on_hover: {
+      title: 'Show tooltip on hover',
+      description: 'Show the content label tooltip on hover.',
       type: 'boolean',
     },
   },
