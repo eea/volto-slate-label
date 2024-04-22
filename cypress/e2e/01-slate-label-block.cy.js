@@ -6,9 +6,12 @@ describe('Slate label', () => {
 
   it('Add slate label', () => {
     // Complete chained commands
-    cy.getSlateEditorAndType('Colorless green ideas sleep furiously.');
+    cy.getSlateEditorAndType('Colorless green ideas sleep furiously.')
+      .type('{selectAll}')
+      .dblclick();
 
     // Footnote
+    cy.setSlateCursor('Colorless').dblclick();
     cy.setSlateSelection('Colorless', 'green');
     cy.clickSlateButton('Label');
 
