@@ -4,7 +4,7 @@ export const LabelEditorSchema = {
     {
       id: 'default',
       title: 'Default',
-      fields: ['label_type'],
+      fields: ['label_theme'],
     },
     {
       id: 'tooltip',
@@ -13,18 +13,16 @@ export const LabelEditorSchema = {
     },
   ],
   properties: {
-    label_type: {
-      title: 'Type of label',
+    label_theme: {
+      title: 'Label Theme',
       type: 'string',
       factory: 'Choice',
       choices: [
-        ['simple', 'Simple'],
-        ['medium', 'Medium importance'],
-        ['high', 'High importance'],
-        ['highlight', 'Highlight'],
+        ['dark', 'Dark theme'],
+        ['light', 'Light theme'],
       ],
-      default: 'simple',
-      description: 'Choose a type or leave the default value (Simple).',
+      default: 'dark',
+      description: 'Choose a theme or leave the default value (dark).',
       required: true,
       noValueOption: false,
     },

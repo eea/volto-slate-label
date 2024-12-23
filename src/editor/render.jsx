@@ -1,5 +1,6 @@
 import React from 'react';
 import LabelWrapper from './LabelWrapper';
+import './styles.less';
 
 export const LabelElement = (props) => {
   const { element, mode } = props;
