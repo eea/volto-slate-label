@@ -17,6 +17,7 @@ const LabelWrapper = (props) => {
 
   return isTooltipText ? (
     <Popup
+      position="top center"
       on={show_on_hover ? 'hover' : 'click'}
       trigger={
         <span
