@@ -47,7 +47,8 @@ const messages = defineMessages({
   },
   labelPointingDescription: {
     id: 'labelPointingDescription',
-    defaultMessage: 'Choose an orientation or leave the default value (No value).',
+    defaultMessage:
+      'Choose an orientation or leave the default value (No value).',
   },
   up: {
     id: 'up',
@@ -198,11 +199,26 @@ export const LabelEditorSchema = ({ intl }) => {
           ['top center', intl.formatMessage(messages.tooltipPointingTopCenter)],
           ['top left', intl.formatMessage(messages.tooltipPointingTopLeft)],
           ['top right', intl.formatMessage(messages.tooltipPointingTopRight)],
-          ['bottom center', intl.formatMessage(messages.tooltipPointingBottomCenter)],
-          ['bottom left', intl.formatMessage(messages.tooltipPointingBottomLeft)],
-          ['bottom right', intl.formatMessage(messages.tooltipPointingBottomRight)],
-          ['right center', intl.formatMessage(messages.tooltipPointingRightCenter)],
-          ['left center', intl.formatMessage(messages.tooltipPointingLeftCenter)],
+          [
+            'bottom center',
+            intl.formatMessage(messages.tooltipPointingBottomCenter),
+          ],
+          [
+            'bottom left',
+            intl.formatMessage(messages.tooltipPointingBottomLeft),
+          ],
+          [
+            'bottom right',
+            intl.formatMessage(messages.tooltipPointingBottomRight),
+          ],
+          [
+            'right center',
+            intl.formatMessage(messages.tooltipPointingRightCenter),
+          ],
+          [
+            'left center',
+            intl.formatMessage(messages.tooltipPointingLeftCenter),
+          ],
         ],
       },
       tooltip_type: {
