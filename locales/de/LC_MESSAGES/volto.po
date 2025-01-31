@@ -34,7 +34,7 @@ msgstr ""
 #. Default: "Edit label"
 #: editor/index
 msgid "editLabel"
-msgstr ""
+msgstr "Label bearbeiten"
 
 #. Default: "Extra wide"
 #: editor/schema
@@ -84,7 +84,7 @@ msgstr ""
 #. Default: "Remove label"
 #: editor/index
 msgid "removeLabel"
-msgstr ""
+msgstr "Label entfernen"
 
 #. Default: "Right"
 #: editor/schema
@@ -114,12 +114,12 @@ msgstr ""
 #. Default: "Tooltip content"
 #: editor/schema
 msgid "tooltipContent"
-msgstr ""
+msgstr "Tooltip-Inhalt"
 
 #. Default: "Enter the text you want to display in the tooltip."
 #: editor/schema
 msgid "tooltipContentDescription"
-msgstr ""
+msgstr "Geben Sie den Text ein der im Tooltip angezeigt werden soll."
 
 #. Default: "Bottom center"
 #: editor/schema
