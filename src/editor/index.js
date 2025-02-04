@@ -1,5 +1,5 @@
 import commentSVG from '@plone/volto/icons/comment.svg';
-import { defineMessages } from 'react-intl'; // , defineMessages
+import { defineMessages, useIntl } from 'react-intl';
 
 import { makeInlineElementPlugin } from '@plone/volto-slate/elementEditor';
 
@@ -12,14 +12,19 @@ import './styles.less';
 
 const messages = defineMessages({
   edit: {
-    id: 'Edit label',
+    id: 'editLabel',
     defaultMessage: 'Edit label',
   },
   delete: {
-    id: 'Remove label',
+    id: 'removeLabel',
     defaultMessage: 'Remove label',
   },
 });
+
+const SchemaProvider = ({ editSchema, children }) => {
+  const intl = useIntl();
+  return children(editSchema({ intl }));
+};
 
 export default function install(config) {
   const opts = {
@@ -28,6 +33,7 @@ export default function install(config) {
     elementType: LABEL,
     element: LabelElement,
     isInlineElement: true,
+    schemaProvider: SchemaProvider,
     editSchema: LabelEditorSchema,
     extensions: [withLabel, withBeforeInsertFragment],
     hasValue: (formData) => !!formData,

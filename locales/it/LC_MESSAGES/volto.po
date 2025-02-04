@@ -11,12 +11,177 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#: editor/index
-# defaultMessage: Edit label
-msgid "Edit label"
+#. Default: "Add label"
+#: editor/schema
+msgid "addLabel"
 msgstr ""
 
+#. Default: "Always show the content label tooltip."
+#: editor/schema
+msgid "alwaysShowDescription"
+msgstr ""
+
+#. Default: "Always show tooltip"
+#: editor/schema
+msgid "alwaysShowTitle"
+msgstr ""
+
+#. Default: "Down"
+#: editor/schema
+msgid "down"
+msgstr ""
+
+#. Default: "Edit label"
 #: editor/index
-# defaultMessage: Remove label
-msgid "Remove label"
+msgid "editLabel"
+msgstr ""
+
+#. Default: "Extra wide"
+#: editor/schema
+msgid "extraWide"
+msgstr ""
+
+#. Default: "High importance"
+#: editor/schema
+msgid "highImportance"
+msgstr ""
+
+#. Default: "Highlight"
+#: editor/schema
+msgid "highlight"
+msgstr ""
+
+#. Default: "Label pointing"
+#: editor/schema
+msgid "labelPointing"
+msgstr ""
+
+#. Default: "Choose an orientation or leave the default value (No value)."
+#: editor/schema
+msgid "labelPointingDescription"
+msgstr ""
+
+#. Default: "Type of label"
+#: editor/schema
+msgid "labelType"
+msgstr ""
+
+#. Default: "Choose a type or leave the default value (Simple)."
+#: editor/schema
+msgid "labelTypeDescription"
+msgstr ""
+
+#. Default: "Left"
+#: editor/schema
+msgid "left"
+msgstr ""
+
+#. Default: "Medium importance"
+#: editor/schema
+msgid "mediumImportance"
+msgstr ""
+
+#. Default: "Remove label"
+#: editor/index
+msgid "removeLabel"
+msgstr ""
+
+#. Default: "Right"
+#: editor/schema
+msgid "right"
+msgstr ""
+
+#. Default: "Show the content label tooltip on hover."
+#: editor/schema
+msgid "showOnHoverDescription"
+msgstr ""
+
+#. Default: "Show tooltip on hover"
+#: editor/schema
+msgid "showOnHoverTitle"
+msgstr ""
+
+#. Default: "Simple"
+#: editor/schema
+msgid "simple"
+msgstr ""
+
+#. Default: "Tooltip"
+#: editor/schema
+msgid "tooltip"
+msgstr ""
+
+#. Default: "Tooltip content"
+#: editor/schema
+msgid "tooltipContent"
+msgstr ""
+
+#. Default: "Enter the text you want to display in the tooltip."
+#: editor/schema
+msgid "tooltipContentDescription"
+msgstr ""
+
+#. Default: "Bottom center"
+#: editor/schema
+msgid "tooltipPointingBottomCenter"
+msgstr ""
+
+#. Default: "Bottom left"
+#: editor/schema
+msgid "tooltipPointingBottomLeft"
+msgstr ""
+
+#. Default: "Bottom right"
+#: editor/schema
+msgid "tooltipPointingBottomRight"
+msgstr ""
+
+#. Default: "Left center"
+#: editor/schema
+msgid "tooltipPointingLeftCenter"
+msgstr ""
+
+#. Default: "Right center"
+#: editor/schema
+msgid "tooltipPointingRightCenter"
+msgstr ""
+
+#. Default: "Tooltip position"
+#: editor/schema
+msgid "tooltipPointingTitle"
+msgstr ""
+
+#. Default: "Top center"
+#: editor/schema
+msgid "tooltipPointingTopCenter"
+msgstr ""
+
+#. Default: "Top left"
+#: editor/schema
+msgid "tooltipPointingTopLeft"
+msgstr ""
+
+#. Default: "Top right"
+#: editor/schema
+msgid "tooltipPointingTopRight"
+msgstr ""
+
+#. Default: "Tooltip size"
+#: editor/schema
+msgid "tooltipSizeTitle"
+msgstr ""
+
+#. Default: "Tooltip type"
+#: editor/schema
+msgid "tooltipTypeTitle"
+msgstr ""
+
+#. Default: "Up"
+#: editor/schema
+msgid "up"
+msgstr ""
+
+#. Default: "Wide"
+#: editor/schema
+msgid "wide"
 msgstr ""
