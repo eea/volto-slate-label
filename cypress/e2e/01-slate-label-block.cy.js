@@ -4,24 +4,52 @@ describe('Slate label', () => {
   beforeEach(slateBeforeEach);
   afterEach(slateAfterEach);
 
-  it('Add slate label', () => {
-    // Complete chained commands
-    cy.getSlateEditorAndType('Colorless green ideas sleep furiously.')
-      .type('{selectAll}')
-      .dblclick();
+  it('allows adding a label via the editor toolbar', () => {
+    cy.getSlateEditorAndType('Colorless green ideas sleep furiously.');
 
-    // Footnote
+    cy.get('.content-area .slate-editor [contenteditable=true]')
+      .last()
+      .type('{selectAll}');
+
     cy.setSlateCursor('Colorless').dblclick();
     cy.setSlateSelection('Colorless', 'green');
-    cy.clickSlateButton('Label');
 
-    cy.get('.sidebar-container .form .header button:first-of-type').click();
+    cy.get('.slate-inline-toolbar .button-wrapper a[title="Label"]')
+      .trigger('mousedown', { force: true });
 
-    // Save
+    cy.wait(500);
+
     cy.get('#toolbar-save').click();
     cy.url().should('eq', Cypress.config().baseUrl + '/cypress/my-page');
 
-    // then the page view should contain our changes
     cy.get('label.label').contains('Colorless green');
+  });
+
+  it('allows removing a label', () => {
+    cy.getSlateEditorAndType('Colorless green ideas sleep furiously.');
+
+    cy.get('.content-area .slate-editor [contenteditable=true]')
+      .last()
+      .type('{selectAll}');
+
+    cy.setSlateCursor('Colorless').dblclick();
+    cy.setSlateSelection('Colorless', 'green');
+
+    cy.get('.slate-inline-toolbar .button-wrapper a[title="Label"]')
+      .trigger('mousedown', { force: true });
+
+    cy.wait(300);
+
+    cy.setSlateSelection('Colorless', 'green');
+    cy.get(
+      '.slate-inline-toolbar .button-wrapper a[title="Remove label"]',
+    ).trigger('mousedown', { force: true });
+
+    cy.wait(500);
+
+    cy.get('#toolbar-save').click();
+    cy.url().should('eq', Cypress.config().baseUrl + '/cypress/my-page');
+
+    cy.get('label.label').should('not.exist');
   });
 });
