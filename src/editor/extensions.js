@@ -1,4 +1,4 @@
-import { LABEL } from '../constants';
+import { LABEL } from '@eeacms/volto-slate-label/constants';
 import { nanoid } from '@plone/volto-slate/utils';
 import { Transforms } from 'slate';
 

@@ -30,8 +30,8 @@ const LabelWrapper = (props) => {
         tooltip_size === 'wide'
           ? true
           : tooltip_size === 'extra'
-          ? 'very'
-          : null
+            ? 'very'
+            : null
       }
       position={tooltip_pointing}
       open={always_show || undefined}
