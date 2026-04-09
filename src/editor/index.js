@@ -5,7 +5,7 @@ import { makeInlineElementPlugin } from '@plone/volto-slate/elementEditor';
 
 import { LabelEditorSchema } from './schema';
 import { withLabel, withBeforeInsertFragment } from './extensions';
-import { LABEL } from '../constants';
+import { LABEL } from '@eeacms/volto-slate-label/constants';
 import { LabelElement } from './render';
 
 import './styles.less';
