@@ -1,20 +1,21 @@
+import { vi } from 'vitest';
 import { withLabel, withBeforeInsertFragment } from './extensions';
 import { Transforms } from 'slate';
 
-jest.mock('slate', () => ({
+vi.mock('slate', () => ({
   Transforms: {
-    setNodes: jest.fn(),
+    setNodes: vi.fn(),
   },
 }));
 
-jest.mock('@plone/volto-slate/utils', () => ({
+vi.mock('@plone/volto-slate/utils', () => ({
   nanoid: () => 'mockedId',
 }));
 
 describe('withLabel', () => {
   it('sets isInline correctly', () => {
     const editor = {
-      isInline: jest.fn(),
+      isInline: vi.fn(),
     };
     const newEditor = withLabel(editor);
 
@@ -26,7 +27,7 @@ describe('withLabel', () => {
 
   it('normalizes node correctly with label that matches', () => {
     const editor = {
-      normalizeNode: jest.fn(),
+      normalizeNode: vi.fn(),
     };
     const newEditor = withLabel(editor);
 
@@ -44,7 +45,7 @@ describe('withLabel', () => {
 
   it('normalizes node correctly with label that does not match', () => {
     const editor = {
-      normalizeNode: jest.fn(),
+      normalizeNode: vi.fn(),
     };
     const newEditor = withLabel(editor);
 
@@ -58,7 +59,7 @@ describe('withLabel', () => {
 describe('withBeforeInsertFragment', () => {
   it('calls beforeInsertFragment correctly and generates new uid correctly', () => {
     const editor = {
-      beforeInsertFragment: jest.fn((parsed) => parsed),
+      beforeInsertFragment: vi.fn((parsed) => parsed),
     };
     const newEditor = withBeforeInsertFragment(editor);
     const parsed = [{ children: [{ data: { uid: 'existingId' } }] }];
