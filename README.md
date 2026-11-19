@@ -1,112 +1,25 @@
 # volto-slate-label
 
 [![Releases](https://img.shields.io/github/v/release/eea/volto-slate-label)](https://github.com/eea/volto-slate-label/releases)
-
 [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-slate-label%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-slate-label/job/master/display/redirect)
-[![Lines of Code](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-slate-label&metric=ncloc)](https://sonarqube.eea.europa.eu/dashboard?id=volto-slate-label)
 [![Coverage](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-slate-label&metric=coverage)](https://sonarqube.eea.europa.eu/dashboard?id=volto-slate-label)
-[![Bugs](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-slate-label&metric=bugs)](https://sonarqube.eea.europa.eu/dashboard?id=volto-slate-label)
-[![Duplicated Lines (%)](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-slate-label&metric=duplicated_lines_density)](https://sonarqube.eea.europa.eu/dashboard?id=volto-slate-label)
-
-[![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-slate-label%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-slate-label/job/develop/display/redirect)
-[![Lines of Code](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-slate-label&branch=develop&metric=ncloc)](https://sonarqube.eea.europa.eu/dashboard?id=volto-slate-label&branch=develop)
-[![Coverage](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-slate-label&branch=develop&metric=coverage)](https://sonarqube.eea.europa.eu/dashboard?id=volto-slate-label&branch=develop)
-[![Bugs](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-slate-label&branch=develop&metric=bugs)](https://sonarqube.eea.europa.eu/dashboard?id=volto-slate-label&branch=develop)
-[![Duplicated Lines (%)](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-slate-label&branch=develop&metric=duplicated_lines_density)](https://sonarqube.eea.europa.eu/dashboard?id=volto-slate-label&branch=develop)
-
 
 [Volto](https://github.com/plone/volto) add-on. [Label](https://eea.github.io/volto-kitkat-frontend/?path=/story/components-label--default) style for [volto-slate](https://github.com/eea/volto-slate) and tooltips.
 
-## Features
+The add-on package lives in [`packages/volto-slate-label`](packages/volto-slate-label),
+its [README](packages/volto-slate-label/README.md) documents installation and usage.
 
-![Label Block](https://raw.githubusercontent.com/eea/volto-slate-label/master/docs/slate-label.png)
+## Development
 
-## Upgrade
-
-### Upgrading to 0.4.x
-
-This version requires: `@plone/volto >= 16.0.0.alpha.15` (`volto-slate` part of Volto Core).
-
-## Getting started
-
-### Try volto-slate-label with Docker
-
-      git clone https://github.com/eea/volto-slate-label.git
-      cd volto-slate-label
-      make
-      make start
-
-Go to http://localhost:3000
-
-`make start` now defaults to Volto 18. To run the same setup against Volto 17, use:
-
-      VOLTO_VERSION=17 make
-      VOLTO_VERSION=17 make start
-
-### Add volto-slate-label to your Volto project
-
-1. Make sure you have a [Plone backend](https://plone.org/download) up-and-running at http://localhost:8080/Plone
-
-   ```Bash
-   docker compose up backend
-   ```
-
-1. Start Volto frontend
-
-* If you already have a volto project, just update `package.json`:
-
-   ```JSON
-   "dependencies": {
-       "@eeacms/volto-slate-label": "*"
-   }
-   ```
-
-   and `volto.config.js`:
-
-   ```JavaScript
-   const addons = ['@eeacms/volto-slate-label'];
-   ```
-
-* If not, create one with Cookieplone, as recommended by the official Plone documentation for Volto 18+:
-
-   ```
-   uvx cookieplone project
-   cd project-title
-   ```
-
-1. Install or update dependencies, then start the project:
-
-   ```
-   make install
-   ```
-
-   For a Cookieplone project, start the backend and frontend in separate terminals:
-
-   ```
-   make backend-start
-   make frontend-start
-   ```
-
-   For a legacy Volto 17 project, install the package with `yarn` and restart the frontend as usual.
-
-1. Go to http://localhost:3000
-
-1. Happy editing!
+See [DEVELOP.md](DEVELOP.md).
 
 ## Release
 
-See [RELEASE.md](https://github.com/eea/volto-slate-label/blob/master/RELEASE.md).
+See [RELEASE.md](RELEASE.md).
 
-## How to contribute
+## License
 
-See [DEVELOP.md](https://github.com/eea/volto-slate-label/blob/master/DEVELOP.md).
-
-## Copyright and license
-
-The Initial Owner of the Original Code is European Environment Agency (EEA).
-All Rights Reserved.
-
-See [LICENSE.md](https://github.com/eea/volto-slate-label/blob/master/LICENSE.md) for details.
+See [LICENSE.md](LICENSE.md) for details.
 
 ## Funding
 
