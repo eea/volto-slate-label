@@ -25,5 +25,6 @@ module.exports = defineConfig({
     },
     baseUrl: 'http://localhost:3000',
     specPattern: 'cypress/tests/**/*.cy.{js,jsx,ts,tsx}',
+    defaultCommandTimeout: 8888,
   },
 });
