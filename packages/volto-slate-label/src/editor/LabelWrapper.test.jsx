@@ -1,9 +1,10 @@
+import { vi } from 'vitest';
 import { render } from '@testing-library/react';
 import LabelWrapper from './LabelWrapper';
 
-jest.mock('@plone/volto-slate/editor/render', () => ({
-  serializeNodes: jest.fn(),
-  serializeNodesToText: jest.fn(() => 'Tooltip Content'),
+vi.mock('@plone/volto-slate/editor/render', () => ({
+  serializeNodes: vi.fn(),
+  serializeNodesToText: vi.fn(() => 'Tooltip Content'),
 }));
 
 describe('LabelWrapper', () => {

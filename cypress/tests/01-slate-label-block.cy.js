@@ -40,7 +40,12 @@ describe('Slate label', () => {
 
     cy.wait(300);
 
+    // Re-open the inline toolbar the same way the first selection did: a real
+    // pointer selection, so the Slate selection is restored on both Volto 18
+    // and 19 (18.35.1 does not map a bare setBaseAndExtent after re-render).
+    cy.setSlateCursor('Colorless').dblclick();
     cy.setSlateSelection('Colorless', 'green');
+
     cy.get(
       '.slate-inline-toolbar .button-wrapper a[title="Remove label"]',
     ).trigger('mousedown', { force: true });
